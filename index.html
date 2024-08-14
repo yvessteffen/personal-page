@@ -9,27 +9,44 @@
 
 <body>
 <div class="scroll-container">
-    <section id="Main">
+    <section class="scrollable" id="Main">
         <div class="section-box">
-            <div class="top-nav">
-                <a href="#About" target="_self" class="top-nav-content">
-                    About
-                </a>
-                <a href="#Projects" target="_self" class="top-nav-content">
-                    Projects
-                </a>
-                <a href="#Contact" target="_self" class="top-nav-content">
-                    Contact
-                </a>
+            <div class="top">
+                <div class="mode-toggle">
+                    <input type="checkbox" id="switch" class="checkbox" onclick="myFunction()" />
+                    <label for="switch" class="toggle">
+                    </label>
+                </div>
+                <div class="top space">
+
+                </div>
+                <div class="top nav">
+                    <h1><a href="#About" class="top-nav-content">About |</a></h1>
+                    <h1><a href="#Projects" class="top-nav-content">Projects |</a></h1>
+                    <h1><a href="#Contact" class="top-nav-content">Contact |</a></h1>
+                </div>
             </div>
-            <div class="container">
-                <div class="soft-card"> test</div>
-                <div class="soft-card"> test</div>
+            <div class="text-grid">
+                <div id="item-0">
+                    <span>hej!</span>
+                </div>
+                <div id="item-1">
+                    <span><em>i'm</em></span>
+                </div>
+                <div id="item-2">
+                    <span>yves</span>
+                </div>
+                <div id="item-3">
+                    <span>a software developer</span>
+                </div>
             </div>
         </div>
     </section>
+    <div class="arrow-box">
+        <i class="arrow down"></i>
+    </div>
 
-    <section id="About">
+    <section class="scrollable" id="About">
         <div class="section-box">
             <h2>About</h2>
             <div class="container">
@@ -39,23 +56,27 @@
         </div>
     </section>
 
-    <section class="section-box Projects" id="Projects">
-        <h2>Projects</h2>
-        <div class="container">
-            <div class="soft-card"> test</div>
-            <div class="soft-card"> test</div>
-        </div>
-        <div class="container">
-            <div class="soft-card"> test</div>
-            <div class="soft-card"> test</div>
+    <section class="scrollable" id="Projects">
+        <div class="section-box">
+            <h2>Projects</h2>
+            <div class="container">
+                <div class="soft-card"> test</div>
+                <div class="soft-card"> test</div>
+            </div>
+            <div class="container">
+                <div class="soft-card"> test</div>
+                <div class="soft-card"> test</div>
+            </div>
         </div>
     </section>
 
-    <section class="section-box Contact" id="Contact">
-        <h2>Contact</h2>
-        <div class="container">
-            <div class="soft-card"> test</div>
-       </div>
+    <section class="scrollable Contact" id="Contact">
+        <div class="section-box">
+            <h2>Contact</h2>
+            <div class="container">
+                <div class="soft-card"> test</div>
+            </div>
+        </div>
 </section>
 </div>
 </body>
