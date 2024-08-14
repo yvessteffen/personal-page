@@ -3,7 +3,7 @@ body {
     align-items: center;
     justify-content: center;
     font: 2vw Helvetica, system-ui;
-    background: #e0e0e0;
+    background-color: #e0e0e0;
     --color: #6667ab;
     margin: 0;
     --shadow-1: #a2a2a2;
