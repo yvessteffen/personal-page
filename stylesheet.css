@@ -1,3 +1,9 @@
+html{
+    scroll-behavior: smooth;
+
+}
+
+
 body {
     display: flex;
     align-items: center;
@@ -9,6 +15,8 @@ body {
     --shadow-1: #a2a2a2;
     --shadow-2: #dbdbdb;
     transition: all 0.5s;
+    scroll-behavior: smooth;
+
 }
 
 .dark-mode {
@@ -39,9 +47,12 @@ a {
     text-decoration: none ;
     font-size: 1.5em;
     font-weight: bold;
+    scroll-behavior: smooth;
+
 }
 
 a:hover {
+    scale: 1.1;
     color: #AB6967;
     transition: all 0.5s ease-in-out;
 }
@@ -96,7 +107,8 @@ h1 {
 }
 
 .nav {
-    width: 40%;
+    animation: FadeInRight 2s ease 0s 1 normal forwards;
+    width: 50%;
     display: block;
     float: right;
     justify-content: space-evenly;
@@ -106,7 +118,6 @@ h1 {
 
 .text-grid {
     width: 100%;
-    margin-top: 4vw;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -115,6 +126,7 @@ h1 {
 }
 
 #item-0 {
+    animation: FadeInBottom 2s ease 0s 1 normal forwards;
     text-transform: uppercase;
     text-align:center;
     display:inline-block;
@@ -143,16 +155,17 @@ h1 {
     font-weight: bold;
     text-transform: capitalize;
     font-size: 6em;
-    grid-area: 1 / 3 / 4 / 11;
+    grid-area: 1 / 3 / 4 / 8;
 }
 
 #item-3 {
-text-align: center;
-text-transform: uppercase;
-font-size: 2em;
-color: #4B4C57;
+    animation: FadeInRight 2s ease 0s 1 normal forwards;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2em;
+    color: #4B4C57;
     grid-area: 3 / 1 / 5 / 10;
-margin-top: 1em;
+    margin-top: 1em;
 }
 
 .container {
@@ -223,7 +236,8 @@ transform: rotate(45deg);
 }
 
 .toggle {
-    transition:  all 0.5s;
+    align-content: center;
+    transition:  all 0.5s ease-in-out;
     position : relative ;
     display : inline-block;
     width : 120px;
@@ -235,7 +249,7 @@ transform: rotate(45deg);
 }
 
 .toggle:after {
-    transition:  all 0.5s;
+    transition:  all 0.5s ease-in-out;
     content: '';
     position: absolute;
     width: 50px;
@@ -252,14 +266,14 @@ p {
 }
 
 .checkbox:checked + .toggle::after {
-    transition:  all 0.5s;
+    transition:  all 0.5s ease-in-out;
     left : 64px;
     background: linear-gradient(145deg, #6d6eb7, #5c5d9a);
 }
 
 .checkbox:checked + .toggle {
     transition:  all 0.5s;
-    background: #bebebe;
+    background: var(--color);
     box-shadow:  27px 27px 62px #3b3c63,
     -27px -27px 62px #9192f3;
 }
@@ -315,6 +329,23 @@ p {
     padding: 2vw
 }
 
+.off {
+    font-size: 25px;
+    margin-right: 20px;
+    float: right;
+    color: #e0e0e0;
+}
+.on {
+    font-size: 25px;
+    margin-left: 20px;
+    float: left;
+    color: #6667ab;
+}
+
+.toggle{
+
+}
+
 .div1 { grid-area: 1 / 1 / 2 / 2; }
 .div2 { grid-area: 2 / 2 / 3 / 3; }
 .div3 { grid-area: 3 / 2 / 4 / 3; }
@@ -326,3 +357,27 @@ p {
 .div9 { grid-area: 4 / 3 / 5 / 9; }
 .div10 { grid-area: 5 / 7 / 6 / 8; }
 .div11 { grid-area: 6 / 3 / 7 / 4; }
+
+@keyframes FadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes FadeInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
