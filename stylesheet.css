@@ -25,7 +25,7 @@ body {
 }
 
 .scroll-container {
-    height: 100vh;
+    height: 100dvh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scroll-snap-stop: always;
@@ -56,34 +56,35 @@ body {
 .side-scroll-box {
     scroll-snap-type: x mandatory;
     width: 80vw;
-    height: 80vh;
+    height: 80dvh;
     animation: fadein 2s;
     padding: 4vh 4vw;
-    scroll-snap-align: start;
-    margin-right: 10vw;
+    scroll-snap-align: center;
+    margin-right: 100vw;
+    margin-left: 100vw;
 }
 
 .scrollable {
     scroll-snap-align: start;
-    scroll-margin-top: 6vh;
-    scroll-margin-bottom: 6vh;
+    scroll-margin-top: 6dvh;
+    scroll-margin-bottom: 6dvh;
     scroll-margin-left: 6vw;
     scroll-margin-right: 6vw;
     scroll-behavior: smooth;
 }
 
 .section-box {
-    height: 80vh;
+    height: 80dvh;
     width: 80vw;
     animation: fadein 2s;
     border-radius: 50px;
     box-shadow:  10px 10px 30px var(--shadow-1),
     -10px -10px 30px var(--shadow-2);
-    margin-top: 4vh;
-    margin-bottom: 4vh;
+    margin-top: 4dvh;
+    margin-bottom: 4dvh;
     margin-left: 6vw;
     margin-right: 6vw;
-    padding: 4vh 4vw;
+    padding: 4dvh 4vw;
 }
 
 a {
@@ -121,7 +122,7 @@ h1 {
 }
 
 .last {
-    margin-bottom: 100vh;
+    margin-bottom: 100dvh;
 }
 
 @keyframes fadein {
