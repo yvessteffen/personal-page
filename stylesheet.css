@@ -16,7 +16,6 @@ body {
     --shadow-2: #dbdbdb;
     transition: all 0.5s;
     scroll-behavior: smooth;
-
 }
 
 .dark-mode {
@@ -36,11 +35,62 @@ body {
     width: 100vw;
 }
 
-.scrollable {
-    scroll-snap-align: start;
-    scroll-margin-top: 5vw;
+.side-scroll-container {
+    display: grid;
+    grid-auto-flow: column;
+    max-width: 200vw;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory ;
+    scroll-snap-stop: always;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+}
+
+.side-scrollable {
+    scroll-snap-align: center;
+    scroll-margin-right: 2vw;
+    scroll-margin-left: 2vw;
     scroll-behavior: smooth;
 }
+
+.scrollable {
+    scroll-snap-align: start;
+    scroll-margin-top: 6vh;
+    scroll-margin-left: 6vw;
+    scroll-margin-right: 6vw;
+    scroll-behavior: smooth;
+}
+
+.side-scroll-box {
+    scroll-snap-type: x mandatory;
+    align-self: center;
+    width: 80vw;
+    height: 80vh;
+    animation: fadein 2s;
+    border-radius: 50px;
+    box-shadow:  20px 20px 60px var(--shadow-1),
+    -20px -20px 60px var(--shadow-2);
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    padding: 4vh;
+}
+
+.section-box {
+    height: 80vh;
+    animation: fadein 2s;
+    border-radius: 50px;
+    box-shadow:  20px 20px 60px var(--shadow-1),
+    -20px -20px 60px var(--shadow-2);
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    padding: 4vh;
+}
+
 
 a {
     color: var(--color);
@@ -78,19 +128,8 @@ h1 {
     margin: 0;
 }
 
-.section-box {
-    animation: fadein 2s;
-    border-radius: 50px;
-    box-shadow:  20px 20px 60px var(--shadow-1),
-    -20px -20px 60px var(--shadow-2);
-    margin: 3vh 2vw;
-    padding: 4vw;
-}
-
 .last {
-    margin: 2vw;
     margin-bottom: 100vh;
-    padding: 4vw;
 }
 
 @keyframes fadein {
