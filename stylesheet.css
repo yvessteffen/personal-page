@@ -1,8 +1,6 @@
 html{
     scroll-behavior: smooth;
-
 }
-
 
 body {
     display: flex;
@@ -33,64 +31,60 @@ body {
     scroll-snap-stop: always;
     scroll-behavior: smooth;
     width: 100vw;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-.side-scroll-container {
-    display: grid;
-    grid-auto-flow: column;
-    max-width: 200vw;
+.side {
+    display: flex;
+    grid-auto-flow: row;
+    max-width: 300vw;
     overflow-x: scroll;
     overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory ;
     scroll-snap-stop: always;
-    scroll-behavior: smooth;
-    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-snap-align: start;
+    box-shadow:  10px 10px 30px var(--shadow-1),
+    -10px -10px 30px var(--shadow-2);
+    border-radius: 50px;
+    margin-left: 6vw;
+    margin-right: 6vw;
 }
 
-.side-scrollable {
-    scroll-snap-align: center;
-    scroll-margin-right: 2vw;
-    scroll-margin-left: 2vw;
-    scroll-behavior: smooth;
+.side-scroll-box {
+    scroll-snap-type: x mandatory;
+    width: 80vw;
+    height: 80vh;
+    animation: fadein 2s;
+    padding: 4vh 4vw;
+    scroll-snap-align: start;
+    margin-right: 10vw;
 }
 
 .scrollable {
     scroll-snap-align: start;
     scroll-margin-top: 6vh;
+    scroll-margin-bottom: 6vh;
     scroll-margin-left: 6vw;
     scroll-margin-right: 6vw;
     scroll-behavior: smooth;
 }
 
-.side-scroll-box {
-    scroll-snap-type: x mandatory;
-    align-self: center;
-    width: 80vw;
-    height: 80vh;
-    animation: fadein 2s;
-    border-radius: 50px;
-    box-shadow:  20px 20px 60px var(--shadow-1),
-    -20px -20px 60px var(--shadow-2);
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    margin-left: 2vw;
-    margin-right: 2vw;
-    padding: 4vh;
-}
-
 .section-box {
     height: 80vh;
+    width: 80vw;
     animation: fadein 2s;
     border-radius: 50px;
-    box-shadow:  20px 20px 60px var(--shadow-1),
-    -20px -20px 60px var(--shadow-2);
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    margin-left: 2vw;
-    margin-right: 2vw;
-    padding: 4vh;
+    box-shadow:  10px 10px 30px var(--shadow-1),
+    -10px -10px 30px var(--shadow-2);
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    margin-left: 6vw;
+    margin-right: 6vw;
+    padding: 4vh 4vw;
 }
-
 
 a {
     color: var(--color);
@@ -98,7 +92,6 @@ a {
     font-size: 1.5em;
     font-weight: bold;
     scroll-behavior: smooth;
-
 }
 
 a:hover {
@@ -115,7 +108,6 @@ h2 {
     align-items: center;
     text-align: center;
     margin: 0;
-
 }
 
 h1 {
@@ -225,8 +217,8 @@ justify-content: center;
 text-align: center;
 border-radius: 50px;
 background: #e0e0e0;
-box-shadow:  20px 20px 60px var(--shadow-1),
--20px -20px 60px var(--shadow-2);
+    box-shadow:  10px 10px 30px var(--shadow-1),
+    -10px -10px 30px var(--shadow-2);
 transition: all 500ms ease-in-out;
 }
 
@@ -239,8 +231,8 @@ inset -20px -20px 60px var(--shadow-2);
 
 .soft-card:hover {
 transform: scale(1.1);
-box-shadow:  20px 20px 60px var(--shadow-1),
--20px -20px 60px var(--shadow-2);
+    box-shadow:  10px 10px 30px var(--shadow-1),
+    -10px -10px 30px var(--shadow-2);
 }
 
 .arrow-box {
@@ -253,8 +245,8 @@ width: 8vw;
 height: 8vw;
 border-radius: 50px;
 background: #e0e0e0;
-box-shadow:  inset 20px 20px 60px #bebebe,
-inset -20px -20px 60px #ffffff;
+    box-shadow:  10px 10px 30px var(--shadow-1),
+    -10px -10px 30px var(--shadow-2);
 }
 
 .arrow {
@@ -330,8 +322,8 @@ p {
     justify-content: center;
     border-radius: 50px;
     color: var(--color);
-    box-shadow: 20px 20px 60px #a2a2a2,
-    -20px -20px 60px #dbdbdb;
+    box-shadow:  10px 10px 30px var(--shadow-1),
+    -10px -10px 30px var(--shadow-2);
     transition: all 0.5s ease-in-out;
     padding: 4vw;
 }
